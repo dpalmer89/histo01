@@ -1,5 +1,6 @@
 ## Load Packages in library
 library(tidyverse)
+library(ggplot2)
 
 ## Acquire data
 final.data <- read_csv("finalData.csv")
@@ -14,7 +15,7 @@ my.hist <- my.hist + geom_histogram(aes(y= ..count..) , binwidth = .25, fill="bl
 my.hist <- my.hist + labs(title="Self-esteem Histogram",x="Self-esteem Level", y="Frequency")
 
 ## Adjust Axes
-my.hist <- my.hist + coord_cartesian(xlim=(1,5) , ylim=c(0,125))
+my.hist <- my.hist + coord_cartesian(xlim=c(0.5, 5.5) , ylim=c(0, 400))
 
 ## Make APA Ready
 my.hist <- my.hist + theme_classic()
